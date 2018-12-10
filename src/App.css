@@ -9,3 +9,11 @@
 	height: 800px;
 	position: relative;
 }
+
+.bee {
+	background-color: #ffdd0e;	
+	border-radius: 90px;
+	position: absolute;
+	width: 8px;
+	height: 8px;
+}
