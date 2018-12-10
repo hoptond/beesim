@@ -8,11 +8,19 @@ class Bee extends Component {
 			X: 0,
 			Y: 0
 		}
-		console.log(this.state);
+		window.requestAnimationFrame(this.flutter);
+	}
+	
+	flutter = () => {
+		this.setState({
+			X: this.state.X += 1 - (Math.random() * 2),
+			Y: this.state.Y += 1 - (Math.random() * 2)
+		})
+		console.log(this.state)
+		window.requestAnimationFrame(this.flutter);
 	}
 	
 	render() {
-		console.log(this.state);
 		return (
 		<div className="bee" style={{left: this.state.X, top: this.state.Y}}>
 			</div>
