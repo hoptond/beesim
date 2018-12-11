@@ -5,8 +5,8 @@ class Bee extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			X: 0,
-			Y: 0
+			X: this.props.X,
+			Y: this.props.Y
 		}
 		window.requestAnimationFrame(this.flutter);
 	}
