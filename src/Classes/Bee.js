@@ -16,7 +16,6 @@ class Bee extends Component {
 			X: this.state.X + 1 - (Math.random() * 2),
 			Y: this.state.Y + 1 - (Math.random() * 2)
 		})
-		console.log(this.state)
 		window.requestAnimationFrame(this.flutter);
 	}
 	
