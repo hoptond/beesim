@@ -17,12 +17,14 @@ class Bee extends Component {
 	
 
 	handleClickOutside = (e) => {
-		let x = e.pageX
-		let y = e.pageY
-		this.setState({
-			targX: x,
-			targY: y
-		})
+		if(e.button === 0) {
+			let x = e.pageX
+			let y = e.pageY
+			this.setState({
+				targX: x,
+				targY: y
+			})
+		}
 	}
 	
 	update = () => {
