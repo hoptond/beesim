@@ -24,7 +24,7 @@ class Bee extends Component {
 	
 	render() {
 		return (
-		<div className="bee" style={{left: this.state.posX, top: this.state.posY}}>
+		<div className="bee center-object" style={{left: this.state.posX, top: this.state.posY}}>
 			</div>
 			);
 	}
