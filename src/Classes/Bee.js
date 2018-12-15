@@ -20,7 +20,6 @@ class Bee extends Component {
 	
 		if(e.button === 0) {
 			var screen = document.getElementById('gamescreen').getBoundingClientRect()
-			console.log(screen)
 			let x = e.pageX - screen.x;
 			let y = e.pageY - screen.y;
 			this.setState({
