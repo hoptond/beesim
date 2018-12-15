@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import onClickOutside from 'react-onclickoutside'
 
 class Bee extends Component {
 	
@@ -14,7 +15,10 @@ class Bee extends Component {
 		window.requestAnimationFrame(this.update)
 	}
 	
-	setTarget(x, y) {
+
+	handleClickOutside = (e) => {
+		let x = e.pageX
+		let y = e.pageY
 		this.setState({
 			targX: x,
 			targY: y
@@ -30,22 +34,19 @@ class Bee extends Component {
 	move = () => {
 		let dist = Math.hypot(this.state.targX - this.state.posX, this.state.targY - this.state.posY)
 		if (dist > this.state.speed) {
-			switch(true) {
-				case this.state.posX > this.state.targX:
-					this.setState({posX: this.state.posX - this.state.speed})
-					break
-				case this.state.posX < this.state.targX:
-					this.setState({posX: this.state.posX + this.state.speed})
-					break
-				case this.state.posY > this.state.targY:
-					this.setState({posY: this.state.posY - this.state.speed})
-					break
-				case this.state.posY < this.state.targY:
-					this.setState({posY: this.state.posY + this.state.speed})
-					break
-				default:
-					//we are perfectly aligned with our target, so do nothing
-					break
+			
+			
+			if(this.state.posX > this.state.targX) {
+				this.setState({posX: this.state.posX - this.state.speed})
+			} else if(this.state.posX < this.state.targX) {
+				this.setState({posX: this.state.posX + this.state.speed})
+			}
+			
+			
+			if(this.state.posY > this.state.targY) {
+				this.setState({posY: this.state.posY - this.state.speed})
+			} else if(this.state.posY < this.state.targY) {
+				this.setState({posY: this.state.posY + this.state.speed})
 			}
 		}
 	}
@@ -65,4 +66,4 @@ class Bee extends Component {
 	}
 }
 
-export default Bee
+export default onClickOutside(Bee)

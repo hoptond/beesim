@@ -1,21 +1,14 @@
 import React, { Component } from 'react';
 import Bee from './Bee.js'
 
+
 class Gamescreen extends Component {
-	
 	render() {
 		return (
-		<div className="gamescreen"
-			 onClick={(e)=> this.handleClick(e)}>
-			
-			<Bee X={500} Y={400}/>
+		<div className="gamescreen">
+			<Bee X={500} Y={400} clickListener={(e)=> this.handleClick(e)}/>
 			</div>
 			);
-	}
-	
-	handleClick(e) {
-		console.log(e.pageX - e.target.offsetLeft)
-		console.log(e.pageY - e.target.offsetTop)
 	}
 }
 
