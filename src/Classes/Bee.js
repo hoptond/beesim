@@ -11,9 +11,21 @@ class Bee extends Component {
 			targY: this.props.Y,
 			speed: 1
 		}
-		window.requestAnimationFrame(this.move)
+		window.requestAnimationFrame(this.update)
 	}
 	
+	setTarget(x, y) {
+		this.setState({
+			targX: x,
+			targY: y
+		})
+	}
+	
+	update = () => {
+		this.move()
+		this.flutter()
+		window.requestAnimationFrame(this.update)
+	}
 	
 	move = () => {
 		let dist = Math.hypot(this.state.targX - this.state.posX, this.state.targY - this.state.posY)
@@ -33,8 +45,6 @@ class Bee extends Component {
 					break
 			}
 		}
-		this.flutter()
-		window.requestAnimationFrame(this.move)
 	}
 		
 	flutter = () => {
