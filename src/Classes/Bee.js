@@ -9,17 +9,39 @@ class Bee extends Component {
 			posY: this.props.Y,
 			targX: this.props.X,
 			targY: this.props.Y,
-			speed: 3
+			speed: 1
 		}
-		window.requestAnimationFrame(this.flutter);
+		window.requestAnimationFrame(this.move)
 	}
 	
+	
+	move = () => {
+		let dist = Math.hypot(this.state.targX - this.state.posX, this.state.targY - this.state.posY)
+		if (dist > this.state.speed) {
+			switch(true) {
+				case this.state.posX > this.state.targX:
+					this.setState({posX: this.state.posX - this.state.speed})
+					break
+				case this.state.posX < this.state.targX:
+					this.setState({posX: this.state.posX + this.state.speed})
+					break
+				case this.state.posY > this.state.targY:
+					this.setState({posY: this.state.posY - this.state.speed})
+					break
+				case this.state.posY < this.state.targY:
+					this.setState({posY: this.state.posY + this.state.speed})
+					break
+			}
+		}
+		this.flutter()
+		window.requestAnimationFrame(this.move)
+	}
+		
 	flutter = () => {
 		this.setState({
 			posX: this.state.posX + 1 - (Math.random() * 2),
 			posY: this.state.posY + 1 - (Math.random() * 2)
 		})
-		window.requestAnimationFrame(this.flutter);
 	}
 	
 	render() {
