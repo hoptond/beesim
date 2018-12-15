@@ -5,23 +5,25 @@ class Bee extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			X: this.props.X,
-			Y: this.props.Y
+			posX: this.props.X,
+			posY: this.props.Y,
+			targX: this.props.X,
+			targY: this.props.Y
 		}
 		window.requestAnimationFrame(this.flutter);
 	}
 	
 	flutter = () => {
 		this.setState({
-			X: this.state.X + 1 - (Math.random() * 2),
-			Y: this.state.Y + 1 - (Math.random() * 2)
+			posX: this.state.posX + 1 - (Math.random() * 2),
+			posY: this.state.posY + 1 - (Math.random() * 2)
 		})
 		window.requestAnimationFrame(this.flutter);
 	}
 	
 	render() {
 		return (
-		<div className="bee" style={{left: this.state.X, top: this.state.Y}}>
+		<div className="bee" style={{left: this.state.posX, top: this.state.posY}}>
 			</div>
 			);
 	}
