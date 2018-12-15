@@ -5,7 +5,7 @@ import Bee from './Bee.js'
 class Gamescreen extends Component {
 	render() {
 		return (
-		<div className="gamescreen">
+		<div id="gamescreen" className="gamescreen">
 			<Bee X={500} Y={400} clickListener={(e)=> this.handleClick(e)}/>
 			</div>
 			);
