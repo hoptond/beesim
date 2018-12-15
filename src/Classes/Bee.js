@@ -8,7 +8,8 @@ class Bee extends Component {
 			posX: this.props.X,
 			posY: this.props.Y,
 			targX: this.props.X,
-			targY: this.props.Y
+			targY: this.props.Y,
+			speed: 3
 		}
 		window.requestAnimationFrame(this.flutter);
 	}
