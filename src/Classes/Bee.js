@@ -43,7 +43,7 @@ class Bee extends Component {
 				case this.state.posY < this.state.targY:
 					this.setState({posY: this.state.posY + this.state.speed})
 					break
-				default
+				default:
 					//we are perfectly aligned with our target, so do nothing
 					break
 			}
