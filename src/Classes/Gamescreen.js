@@ -6,7 +6,7 @@ class Gamescreen extends Component {
 	render() {
 		return (
 		<div id="gamescreen" className="gamescreen">
-			<Bee X={500} Y={400} clickListener={(e)=> this.handleClick(e)}/>
+			<Bee X={500} Y={400} />
 			</div>
 			);
 	}
