@@ -17,8 +17,8 @@ class Bee extends Component {
 	
 
 	handleClickOutside = (e) => {
-	
-		if(e.button === 0) {
+		
+		if(e.button === 0 && e.target.className === "gamescreen") {
 			var screen = document.getElementById('gamescreen').getBoundingClientRect()
 			let x = e.pageX - screen.x;
 			let y = e.pageY - screen.y;
