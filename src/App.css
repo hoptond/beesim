@@ -39,8 +39,15 @@
 }
 
 .uibutton {
-	background-color: #ad9121;
-	border-color: #421122;
+	background-color: #d5d599;
+	border: 1px solid #606010;
+	border-radius: 10px;
 	width: 48px;
 	height: 48px;
+	padding: 0;
+    transition-duration: 0.1s;
+}
+
+.uibutton:hover {
+	background-color: #f3f3d2;
 }
