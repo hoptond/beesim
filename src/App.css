@@ -29,6 +29,11 @@
 	width: 400px;
 	height: 100px;
 	bottom: 0;
+	transition-duration: 0.4s;
+}
+
+.uipanel.offscreen {
+	transform: translateX(-95%);
 }
 
 .button-row {
