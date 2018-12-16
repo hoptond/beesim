@@ -51,3 +51,8 @@
 .uibutton:hover {
 	background-color: #f3f3d2;
 }
+
+.uibutton:active {
+	box-shadow: inset 0px 0px 5px #666666;
+	background-color: #d5d599;
+}
