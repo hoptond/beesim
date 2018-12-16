@@ -31,3 +31,16 @@
 	bottom: 0;
 }
 
+.button-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 20px 20px;
+}
+
+.uibutton {
+	background-color: #ad9121;
+	border-color: #421122;
+	width: 48px;
+	height: 48px;
+}

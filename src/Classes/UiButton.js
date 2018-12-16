@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class UiPanel extends Component {
+class UiButton extends Component {
 	
 	constructor(props) {
 		super(props)
@@ -8,12 +8,11 @@ class UiPanel extends Component {
 	
 	render() {
 		return (
-		<div className="uipanel">
-			{this.props.children}
-			</div>
+		<button className="uibutton">
+			</button>
 			);
 	}
 	
 }
 
-export default UiPanel
+export default UiButton
