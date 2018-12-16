@@ -22,3 +22,12 @@
 .center-object {
 	transform: translate(-50%, -50%);	
 }
+
+.uipanel {
+	background-color: #aeb274;
+	position: absolute;
+	width: 400px;
+	height: 100px;
+	bottom: 0;
+}
+

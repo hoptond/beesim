@@ -7,6 +7,7 @@ class Gamescreen extends Component {
 		return (
 		<div id="gamescreen" className="gamescreen">
 			<Bee X={500} Y={400}/>
+			{this.props.children}
 			</div>
 			);
 	}
